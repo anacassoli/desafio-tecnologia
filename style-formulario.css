@@ -25,7 +25,7 @@ body {
 /* Lado esquerdo com imagem */
 .left-panel {
   flex: 1;
-  background: url('../Cabeçalho.png') no-repeat center center;
+  background: url('./Cabeçalho.png') no-repeat center center;
   background-size: cover;
 }
 
