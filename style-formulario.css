@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+  body {
+  font-family: 'Poppins', 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+}
+
+}
+
+/* lados (esquerdo e direito) */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Lado esquerdo com imagem */
+.left-panel {
+  flex: 1;
+  background: url('../Cabeçalho.png') no-repeat center center;
+  background-size: cover;
+}
+
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#305879, #305879,#305879);
+  padding: 100px;
+}
+
+.form-cadastro {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-cadastro h1 {
+  margin-bottom: 30px;
+  color: #0d1a6d;
+}
+
+.form-cadastro p {
+  margin-bottom: 20px;
+  color: #1c1b1b;
+  font-size: 14px;
+}
+/* Estilo geral dos titulos */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #1b262c;
+}
+/* Estilo para inputs, selects e áreas de texto */
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0f4c75;
+  box-shadow: 0 0 5px rgba(15, 76, 117, 0.3);
+}
+
+fieldset {
+  margin-top: 20px;
+  border: none;
+}
+
+fieldset label {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+/* Área de texto (caixa de comentários/descrição) */
+textarea {
+  resize: vertical;
+  height: 30px;
+}
+
+.checkbox {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Botão de envio */
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background-color: #0f4c75;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7aa3bd;
+}
+
+/* Layout para dispositivos móveis (até 768px) */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    height: 200px;
+    background-position: center;
+  }
+
+  .right-panel {
+    padding: 40px 20px;
+  }
+
+  .form-cadastro {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+/* Layout para tablets (entre 769px e 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    height: 300px;
+    background-position: center;
+  }
+
+  .right-panel {
+    padding: 60px 40px;
+  }
+
+  .form-cadastro {
+    max-width: 90%;
+  }
+}
+
+/* Layout para desktops grandes (acima de 1440px) */
+@media (min-width: 1440px) {
+  .right-panel {
+    padding: 120px;
+  }
+
+  .form-cadastro {
+    max-width: 600px;
+  }
+}

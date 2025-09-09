@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root{
+  --cor-texto: #ffffff;
+  --cor-fundo: #ffffff;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*cor da escrita*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/*borda do título*/
+header {
+  background-color: #405499;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*cor dos cards*/
+.card {
+  background-color: #405499;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.521);
+  transition: transform 0.2s;
+}
+
+/*titulo card*/
+.card h2 {
+  margin-bottom: 0.5rem;
+  color: #a4a8e5;
+}
+
+/*titulo card menor*/
+.minus_title_card {
+  font-size: 16px;
+
+}
+
+.card a:hover {
+  color: rgb(255, 237, 215);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.info {
+  color: #4a5097;
+
+}
+
+
+footer {
+  background-color: #405499;
+  color: #f1f1f1;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-info,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-info h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-info p {
+  color: #ffffff;
+}
+
+.footer-social a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+
+/* Para celulares (até 600px) */
+@media (max-width: 600px) {
+  header {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-info,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 0.8em;
+  }
+}
+
+/* Para tablets (601px até 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  header {
+    padding: 2rem 1rem;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-info,
+  .footer-social {
+    width: 48%;
+  }
+}
+
+/* Para telas grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
